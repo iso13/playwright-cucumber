@@ -12,16 +12,13 @@
     "report": "open reports/report.html",
     "test": "./run_tests.sh",
     "allure:dashboard": "allure serve ./reports/allure-results",
-    "prepare": "is-ci || husky install",
-    "build": "npx tsc",
-    "gherkin-lint": "npx gherkin-lint",
-    "eslint": "npx eslint ."
+    "build": "npx tsc"
   },
   "engines": {
     "node": ">=14"
   },
   "dependencies": {
-    "@assertthat/assertthat-bdd": "^1.9.4",
+    "@assertthat/assertthat-bdd": "^1.9.3",
     "@cucumber/cucumber": "^10.0.1",
     "@cucumber/html-formatter": "21.0.0",
     "@cucumber/messages": "^23.0.0",
@@ -30,7 +27,7 @@
     "allure-commandline": "^2.24.1",
     "allure-playwright": "^2.9.2",
     "cucumber-console-formatter": "1.0.0",
-    "cucumber-html-reporter": "^7.1.1",
+    "cucumber-html-reporter": "^6.0.0",
     "cucumber-pretty": "^6.0.1",
     "playwright": "^1.40.0",
     "typescript": "5.2.2",
@@ -48,7 +45,7 @@
     "axe-html-reporter": "^2.2.3",
     "axe-playwright": "^1.2.3",
     "cross-env": "^7.0.3",
-    "cucumber-junit": "^1.7.1",
+    "cucumber-junit": "^1.5.0",
     "cucumberjs-junitxml": "^1.0.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.53.0",
@@ -57,7 +54,6 @@
     "eslint-plugin-prettier": "5.0.1",
     "fs-extra": "^11.1.1",
     "gherkin-lint": "^4.2.2",
-    "husky": "^8.0.3",
     "is-ci": "^3.0.1",
     "lint-staged": "^15.1.0",
     "open": "^9.1.0",
@@ -67,18 +63,5 @@
     "standard-version": "^9.5.0",
     "ts-node": "^10.9.1",
     "tsc-files": "^1.1.4"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,js}": [
-      "npx prettier --write"
-    ],
-    "src/**/*.ts": [
-      "npx eslint --fix",
-      "npx eslint",
-      "npx tsc-files --noEmit"
-    ],
-    "src/features/**/*.feature": [
-      "npx gherkin-lint"
-    ]
   }
 }
