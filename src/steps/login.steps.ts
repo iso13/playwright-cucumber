@@ -3,7 +3,7 @@ import { Browser, chromium } from "playwright";
 
 let browser: Browser;
 
-Given('I launch EFTPS', async function () {
+Given('I launch the application', async function () {
  browser = await chromium.launch();
  const context =await browser.newContext()
   const page =await context.newPage()
