@@ -1,4 +1,4 @@
-# Playwright Knowledge Base
+# Cucumber Playwright Knowledge Base
 
 In this knowledge base we have aggregated the team's knowledge and experience in UI and E2E testing with Playwright and BDD, created the documentation and gathered in this document.
 
